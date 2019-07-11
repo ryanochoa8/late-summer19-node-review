@@ -11,6 +11,7 @@ export default class GalaxyController {
 
   async getAllGalaxys(req, res, next) {
     try {
+
       let galaxys = await _galaxyService.find()
       res.send(galaxys)
     } catch (err) { next(err) }
