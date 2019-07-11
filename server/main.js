@@ -7,7 +7,7 @@ let server = express()
 
 
 server.use(bp.json())
-
+server.use('/api/galaxies', new Galaxy)
 server.use((error, req, res, next) => {
   res.status(error.status || 400).send(error)
 })
