@@ -10,7 +10,7 @@ export default class MoonController {
   }
   async getMoon(req, res, next) {
     try {
-      let moon = await _moonService.findById(req.params.MoonId)
+      let moon = await _moonService.findById(req.params.moonId)
       if (!moon) {
         return res.status(400).send("This is not the Moon you are looking for...")
       }

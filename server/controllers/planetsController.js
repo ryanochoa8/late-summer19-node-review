@@ -13,7 +13,7 @@ export default class PlanetController {
   }
   async getPlanet(req, res, next) {
     try {
-      let planet = await _planetService.findById(req.params.PlanetId)
+      let planet = await _planetService.findById(req.params.planetId)
       if (!planet) {
         return res.status(400).send("This is not the Planet you are looking for...")
       }
