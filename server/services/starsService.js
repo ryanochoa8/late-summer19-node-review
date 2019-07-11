@@ -3,7 +3,6 @@ import mongoose from 'mongoose'
 let ObjectId = mongoose.Schema.Types.ObjectId
 let _schema = new mongoose.Schema({
   name: { type: String, required: true },
-  planets: [{ type: ObjectId, ref: 'Planet' }],
   galaxy: { type: ObjectId, ref: 'Galaxy', required: true }
 }, { timestamps: true })
 
