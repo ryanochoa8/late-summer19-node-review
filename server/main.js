@@ -5,6 +5,8 @@ import "./db/dbconfig"
 import GalaxyController from "./controllers/galaxysController";
 import StarController from "./controllers/starsController";
 import PlanetController from "./controllers/planetsController";
+import MoonController from "./controllers/moonsController";
+
 
 let port = 3000
 
@@ -15,6 +17,7 @@ server.use(bp.json())
 server.use('/api/galaxies', new GalaxyController().router)
 server.use('/api/stars', new StarController().router)
 server.use('/api/planets', new PlanetController().router)
+server.use('/api/moons', new MoonController().router)
 
 
 
