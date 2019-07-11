@@ -42,7 +42,7 @@ export default class MoonController {
   constructor() {
     this.router = express.Router()
       .get('', this.getAllMoons)
-      .get('?:moonId', this.getMoon)
+      .get('/:moonId', this.getMoon)
       .post('', this.createMoon)
       .put('/:moonId', this.editMoon)
       .delete('/:moonId', this.destroyMoon)
